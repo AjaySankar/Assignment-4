@@ -1,0 +1,45 @@
+body {
+  width: 960px;
+  margin: 20px auto 0px auto;
+}
+
+div, footer {
+  background-color: silver;
+}
+
+header, section, main, footer {
+  display: grid;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.itemListContainer {
+  display: grid;
+  grid-template: 50px / 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+header {
+  grid-template: 80px / 200px 1fr;
+  grid-gap: 300px;
+}
+
+header div:last-of-type {
+  height: 50px;
+  align-self: center;
+}
+
+section {
+  grid-template-rows: 300px;
+}
+
+main {
+  grid-template: 150px / 1fr 1fr;
+  grid-gap: 20px;
+}
+
+footer {
+  height: 50px;
+  align-items: center;
+  justify-items: center;
+}
