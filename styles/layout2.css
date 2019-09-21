@@ -1,0 +1,52 @@
+body {
+  width: 960px;
+  margin: 20px auto 0px auto;
+}
+
+div, footer {
+  background-color: silver;
+}
+
+header, section, main, footer {
+  display: grid;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.itemListContainer {
+  display: grid;
+  grid-template: 50px / 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+header {
+  grid-template: 80px / 200px 1fr;
+  grid-gap: 300px;
+}
+
+header div:last-of-type {
+  height: 50px;
+  align-self: center;
+}
+
+section {
+  grid-template-rows: 100px;
+}
+
+main {
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+main > div {
+  background-color: silver;
+  width: 313px;
+  height: 150px;;
+}
+
+footer {
+  height: 50px;
+  align-items: center;
+  justify-items: center;
+}
