@@ -1,45 +1,62 @@
-body {
+.container {
   width: 960px;
   margin: 20px auto 0px auto;
+  height: 800px;
+  display: grid;
+  grid-template-rows: 100px 300px 200px 50px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-div, footer {
+.sec1, footer, .logo, .itemList, .sec2 div {
   background-color: silver;
 }
 
-header, section, main, footer {
-  display: grid;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.itemListContainer {
-  display: grid;
-  grid-template: 50px / 1fr 1fr 1fr 1fr;
-  justify-items: center;
-}
-
 header {
-  grid-template: 80px / 200px 1fr;
-  grid-gap: 300px;
+  grid-column: 1/5;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-header div:last-of-type {
+.logo {
+  grid-column: 1/2;
+}
+
+.itemList {
   height: 50px;
+  grid-column: 3/5;
   align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-section {
-  grid-template-rows: 300px;
+.itemList span {
+  align-self: center;
+  justify-self: center;
 }
 
-main {
-  grid-template: 150px / 1fr 1fr;
-  grid-gap: 20px;
+.sec1 {
+  display: grid;
+  grid-row: 2/3;
+  grid-column: 1/5;
+}
+
+.sec2 {
+  grid-row: 3/4;
+  grid-column: 1/5;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 
 footer {
-  height: 50px;
-  align-items: center;
-  justify-items: center;
+  display: grid;
+  grid-column: 1/5;
+}
+
+footer span {
+  align-self: center;
+  justify-self: center;
 }
